@@ -25,6 +25,8 @@ from matplotlib import pyplot
 # fig.canvas.mpl_connect('key_press_event', lambda evt: print(repr(evt.key))) # print key pressed
 # plt.rcParams['keymap.quit'].append(' ')
 
+# pyplot.switch_backend("QtAgg")  # MacOSX, QtAgg, GTK4Agg, Gtk3Agg, TkAgg, WxAgg, Agg
+
 
 class MplDrawer(
     # metaclass=PostInit

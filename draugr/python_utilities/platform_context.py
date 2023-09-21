@@ -7,9 +7,21 @@ __doc__ = r"""
            Created on 8/24/22
            """
 
-__all__ = ["in_ipynb"]
+__all__ = [
+    "in_ipynb",
+    "in_docker",
+    "can_ping_subprocess",
+    "can_ping",
+    "hostname_resolves",
+]
 
 import sys
+import os
+from warg.os_utilities import is_windows
+from warg.functions import text_in_file
+from pathlib import Path
+import subprocess
+import platform
 
 
 def in_ipynb(verbose: bool = False) -> bool:
@@ -46,5 +58,47 @@ def in_ipynb(verbose: bool = False) -> bool:
         return False  # Did not find Ipython
 
 
+def in_docker(
+    # hostname: str = "host.docker.internal"
+) -> bool:
+    """ """
+    return (
+        Path("/.dockerenv").exists()  # short circuits
+        or text_in_file("docker", Path("/proc/self/cgroup"))  # short circuits
+        # or (hostname_resolves(hostname) and can_ping_subprocess(hostname))
+    )
+
+
+def can_ping(hostname: str) -> bool:
+    return not bool(os.system(f"ping -{'n' if is_windows() else 'c'} 1 {hostname}"))
+
+
+def hostname_resolves(hostname: str) -> bool:
+    try:
+        import socket
+
+        socket.gethostbyname(hostname)
+        return True
+    except socket.error:
+        return False
+
+
+def can_ping_subprocess(hostname: str) -> bool:
+    try:
+        return not bool(
+            subprocess.check_output(
+                f"ping -{'n' if is_windows() else 'c'} 1 {hostname}",
+                shell=True,
+            )
+        )
+    except Exception:
+        return False
+
+
 if __name__ == "__main__":
-    in_ipynb()
+    print(in_ipynb())
+    print(in_docker())
+    # print(hostname_resolves("host.docker.internal"))
+    print(can_ping_subprocess("host.docker.internal"))
+    print(can_ping("host.docker.internal"))
+    # print(hostname_resolves())
