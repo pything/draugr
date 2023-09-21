@@ -23,6 +23,7 @@ try:
     from .signal_utilities import *
     from .raster_grid_2d_masking import *
     from .mixing import *
+    from .hashing import *
 except ImportError as ix:
     this_package_name = Path(__file__).parent.name
     this_package_reqs = (
