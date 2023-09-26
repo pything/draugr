@@ -43,7 +43,8 @@ from draugr.writers.writer import Writer
 from matplotlib import pyplot
 from matplotlib.figure import Figure
 
-from warg import drop_unused_kws, passes_kws_to, sprint
+from draugr.python_utilities.styling import sprint
+from warg import drop_unused_kws, passes_kws_to
 
 with suppress(FutureWarning):
     from torch.utils.tensorboard import SummaryWriter

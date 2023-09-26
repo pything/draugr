@@ -21,3 +21,4 @@ from .matrix import *
 from .platform_context import *
 from .sockets import *
 from .torch_like_channel_transformation import *
+from .styling import *

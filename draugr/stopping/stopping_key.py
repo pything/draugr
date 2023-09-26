@@ -12,8 +12,8 @@ from time import sleep
 from typing import Callable, Iterable, Sequence, MutableMapping, Any
 
 from pynput.keyboard import KeyCode
-
-from warg import GDKC, drop_unused_kws, passes_kws_to, sprint
+from draugr.python_utilities.styling import sprint
+from warg import GDKC, drop_unused_kws, passes_kws_to
 
 # import keyboard
 
