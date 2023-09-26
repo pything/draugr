@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from draugr.drawers.terminal.terminal_utilities import scale
 
-from warg import (
+from draugr.python_utilities.styling import (
     COLORS,
     PrintStyle,
     generate_style,
