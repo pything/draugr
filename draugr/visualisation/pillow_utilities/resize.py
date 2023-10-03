@@ -11,7 +11,7 @@ from typing import Tuple
 
 import PIL.Image
 import numpy
-from draugr.visualisation.pillow_utilities import np_array_to_pil_img
+from .conversion import np_array_to_pil_img
 
 __all__ = ["resize_array"]
 
