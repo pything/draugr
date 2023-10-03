@@ -18,6 +18,7 @@ doc8>=0.11.2
 flake8>=4.0.1
 bandit>=1.7.4
 matplotlib>=3.5.2
+types-six>=1.1.1
 
 -r ../requirements.txt
 -r requirements_docs.txt
@@ -35,6 +36,8 @@ matplotlib>=3.5.2
 -r requirements_extensions.txt
 -r requirements_multiprocessing.txt
 -r requirements_pygame.txt
+
 # full install
 setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
 numpy>=1.22.2 # not directly required, pinned by Snyk to avoid a vulnerability
+pillow>=10.0.1 # not directly required, pinned by Snyk to avoid a vulnerability

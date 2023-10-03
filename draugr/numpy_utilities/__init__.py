@@ -16,7 +16,6 @@ with open(Path(__file__).parent / "README.md", "r") as this_init_file:
 try:
     from .channel_transform import *
     from .manipulation import *
-    from .resize import *
     from .datasets import *
     from .sampling import *
     from .powers import *
