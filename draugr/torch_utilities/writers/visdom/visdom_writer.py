@@ -5,7 +5,7 @@ import visdom
 
 from draugr.writers.writer import Writer
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 9/14/19

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from torch import nn
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 20/10/2019

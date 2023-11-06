@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = ""
 
 __all__ = ["add_early_stopping_key_combination", "CaptureEarlyStop"]

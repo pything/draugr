@@ -14,7 +14,7 @@ __doc__ = r"""
            Created on 7/5/22
            """
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __all__ = ["terminal_plot", "styled_terminal_plot_stats_shared_x"]
 
 from typing import Sequence, Dict, MutableMapping

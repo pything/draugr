@@ -15,7 +15,7 @@ from warg import latest_file
 from warg import passes_kws_to
 from warg.decorators.kw_passing import drop_unused_kws
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 
 model_extension = ".model"
 config_extension = ".py"

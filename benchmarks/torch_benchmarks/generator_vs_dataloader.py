@@ -10,7 +10,7 @@ from torch.utils.data import Dataset
 
 from warg import inner_map
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 28/10/2019

@@ -10,7 +10,7 @@ from torch.utils.data.dataloader import DataLoader
 
 from warg import passes_kws_to
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 28/10/2019

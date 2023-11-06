@@ -5,7 +5,7 @@ from typing import List
 import cv2
 import numpy
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 10/10/2019

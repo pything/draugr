@@ -7,7 +7,7 @@ import torch
 import torchvision
 from PIL.Image import Image
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = ""
 __all__ = ["to_tensor"]
 

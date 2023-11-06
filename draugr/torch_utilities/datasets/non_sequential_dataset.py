@@ -5,7 +5,7 @@ from typing import List
 import numpy
 from torch.utils.data import Dataset
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 09/10/2019

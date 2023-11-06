@@ -4,7 +4,7 @@ from typing import Any
 
 from draugr.writers.writer import Writer
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = """
 Created on 27/04/2019
 

@@ -8,7 +8,7 @@ ensure_in_sys_path(find_nearest_ancestral_relative("draugr").parent)
 from draugr import PROJECT_APP_PATH
 from draugr.writers import LogWriter
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
            """
 

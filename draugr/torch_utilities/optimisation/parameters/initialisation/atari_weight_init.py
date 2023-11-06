@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import torch
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 
 import numpy
 

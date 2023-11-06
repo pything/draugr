@@ -6,7 +6,7 @@ from typing import Any, Sequence
 import torch
 from torch import nn
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 """
 __all__ = ["Architecture"]

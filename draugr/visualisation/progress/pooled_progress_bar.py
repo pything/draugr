@@ -18,7 +18,7 @@ from pathos.helpers import cpu_count
 from pathos.multiprocessing import ProcessPool as Pool
 from tqdm.auto import tqdm
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __all__ = [
     "parallel_map",
     "parallel_imap",

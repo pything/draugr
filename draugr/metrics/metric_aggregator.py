@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import List
 from warnings import warn
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 
 __all__ = ["MetricAggregator", "save_metric"]
 

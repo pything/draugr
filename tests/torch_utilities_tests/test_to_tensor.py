@@ -8,7 +8,7 @@ from warg import ensure_in_sys_path, find_nearest_ancestral_relative
 ensure_in_sys_path(find_nearest_ancestral_relative("draugr").parent)
 from draugr.torch_utilities.tensors.to_tensor import to_tensor
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = ""
 
 

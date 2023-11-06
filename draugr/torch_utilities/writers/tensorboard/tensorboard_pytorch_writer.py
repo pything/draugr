@@ -49,7 +49,7 @@ from warg import drop_unused_kws, passes_kws_to
 with suppress(FutureWarning):
     from torch.utils.tensorboard import SummaryWriter
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = """
 Created on 27/04/2019
 
