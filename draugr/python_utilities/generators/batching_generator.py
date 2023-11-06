@@ -3,7 +3,7 @@
 
 from typing import Any, Iterable, Sequence
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 21/10/2019

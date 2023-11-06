@@ -3,7 +3,7 @@
 import logging
 import os
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 
 from pathlib import Path
 

@@ -9,7 +9,7 @@ import torch
 from PIL import Image
 from sorcery import assigned_names
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 09/10/2019

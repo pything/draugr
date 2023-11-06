@@ -9,7 +9,7 @@ from draugr.torch_utilities.optimisation.parameters.initialisation import fan_in
 from torch import nn
 from torch.distributions import MultivariateNormal, Normal
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = ""
 __all__ = [
     "ShallowStdNormalMLP",

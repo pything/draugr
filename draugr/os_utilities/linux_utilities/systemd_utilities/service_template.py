@@ -1,4 +1,4 @@
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""description"""
 __all__ = [
     "SERVICE_TEMPLATE",

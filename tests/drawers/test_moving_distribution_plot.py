@@ -8,7 +8,7 @@ from warg import ensure_in_sys_path, find_nearest_ancestral_relative
 ensure_in_sys_path(find_nearest_ancestral_relative("draugr").parent)
 from draugr.drawers.mpl_drawers.distribution_plot import DistributionPlot
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 9/2/19

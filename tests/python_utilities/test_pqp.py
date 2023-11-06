@@ -13,7 +13,7 @@ from draugr.multiprocessing_utilities.pooled_queue_processor import (
 )
 from warg.functions import identity
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 
 
 class Square(PooledQueueTask):

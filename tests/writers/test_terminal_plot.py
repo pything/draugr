@@ -7,7 +7,7 @@ ensure_in_sys_path(find_nearest_ancestral_relative("draugr").parent)
 
 from draugr.drawers.terminal import terminal_plot
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 
 import numpy
 

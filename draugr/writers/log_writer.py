@@ -9,7 +9,7 @@ from draugr.writers.writer import Writer
 
 from warg import ensure_existence
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = """
 Created on 27/04/2019
 

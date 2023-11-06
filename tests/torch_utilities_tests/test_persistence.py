@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 23/09/2019

@@ -6,7 +6,7 @@ from warg import ensure_in_sys_path, find_nearest_ancestral_relative
 ensure_in_sys_path(find_nearest_ancestral_relative("draugr").parent)
 from draugr.metrics import MetricAggregator
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
            """
 

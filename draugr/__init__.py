@@ -3,8 +3,8 @@
 # -*- coding: utf-8 -*-
 
 __project__ = "Draugr"
-__author__ = "Christian Heider Nielsen"
-__version__ = "1.1.3"
+__author__ = "Christian Heider Lindbjerg"
+__version__ = "1.1.4"
 __doc__ = r"""
 Created on 27/04/2019
 

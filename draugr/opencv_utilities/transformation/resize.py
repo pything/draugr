@@ -6,7 +6,7 @@ from typing import Any
 import cv2
 import numpy
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 01/12/2019

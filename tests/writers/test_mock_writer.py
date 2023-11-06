@@ -8,7 +8,7 @@ ensure_in_sys_path(find_nearest_ancestral_relative("draugr").parent)
 
 from draugr.writers import MockWriter, global_writer, set_global_writer
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
            """
 

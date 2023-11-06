@@ -4,7 +4,7 @@ import numpy
 import pytest
 import torch
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = ""
 
 from torch import nn

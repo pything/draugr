@@ -7,7 +7,7 @@ import torch
 from draugr.torch_utilities.architectures.mlp import MLP
 from draugr.torch_utilities.tensors.to_tensor import to_tensor
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = "Fusion variant of MLPs"
 
 __all__ = ["PreConcatInputMLP", "LateConcatInputMLP"]

@@ -4,7 +4,7 @@ import collections
 
 import numpy
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = """
 Created on 27/04/2019
 

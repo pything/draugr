@@ -9,7 +9,7 @@ from draugr.torch_utilities.tensors.to_tensor import to_tensor
 from torch.distributions import Categorical
 from torch.nn import functional
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 """
 __all__ = ["MultipleCategoricalMLP", "CategoricalMLP"]

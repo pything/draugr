@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 08-12-2020
@@ -36,7 +36,7 @@ def progress_bar(
     total: int = None,
     auto_total_generator: bool = False,
     auto_describe_iterator: bool = True,  # DOES NOT WORK IS THIS FUNCTION IS ALIAS does not match!
-    alias="progress_bar",
+    alias: str = "progress_bar",
     disable: bool = False,
     verbose: bool = False,
     timestamp_mode: TimestampModeEnum = TimestampModeEnum.none,
@@ -103,6 +103,7 @@ def progress_bar(
         prefix = empty_str
         postfix = empty_str
         update_timestamp = True
+
         if timestamp_mode == TimestampModeEnum.prefix:
             prefix = time.time
         elif timestamp_mode == TimestampModeEnum.postfix:
@@ -123,6 +124,7 @@ def progress_bar(
                             ).strip()
                         )
             return
+
         for val in generator:
             a = yield val
             if update_timestamp or a:

@@ -4,7 +4,7 @@ from typing import MutableMapping
 
 from torch import nn
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = ""
 
 from draugr.torch_utilities.architectures.mlp import MLP

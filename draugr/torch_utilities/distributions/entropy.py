@@ -5,7 +5,7 @@ import math
 import torch
 from draugr.torch_utilities.system.constants import torch_pi
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
            Created on 09/10/2019

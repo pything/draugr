@@ -18,7 +18,7 @@ from torch.nn import Module
 
 from warg import NOD
 
-__author__ = "Christian Heider Nielsen"
+__author__ = "Christian Heider Lindbjerg"
 
 __doc__ = r"""
 Description: Multi Layer Perceptron
