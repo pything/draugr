@@ -30,6 +30,7 @@ def positive_int_hash(
 ) -> int:
     """
 
+    :param hasher:
     :param s:
     :param limit_size:
     :return:
