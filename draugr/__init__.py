@@ -4,7 +4,7 @@
 
 __project__ = "Draugr"
 __author__ = "Christian Heider Lindbjerg"
-__version__ = "1.1.4"
+__version__ = "1.1.5"
 __doc__ = r"""
 Created on 27/04/2019
 
