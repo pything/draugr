@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from torch.utils.data.sampler import BatchSampler
 
 

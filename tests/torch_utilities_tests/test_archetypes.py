@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import numpy
 import pytest
 import torch

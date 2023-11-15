@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 __project__ = "Draugr"
 __author__ = "Christian Heider Lindbjerg"
-__version__ = "1.1.5"
+__version__ = "1.1.6"
 __doc__ = r"""
 Created on 27/04/2019
 

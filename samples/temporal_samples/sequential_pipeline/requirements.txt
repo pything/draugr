@@ -1,5 +1,5 @@
-temporalio
+aiohttp
+pandas
 pytest
 pytest_asyncio
-pandas
-aiohttp
+temporalio

@@ -14,12 +14,10 @@ import sys
 from enum import Enum
 from pathlib import Path
 from typing import Any, Dict, Iterable, OrderedDict, Sequence
-
+from sorcery import assigned_names
 import numpy
 
 __all__ = ["SplitEnum", "SplitIndexer", "train_valid_test_split", "select_split"]
-
-from sorcery import assigned_names
 
 
 class SplitEnum(Enum):
@@ -122,7 +120,7 @@ def train_valid_test_split(
     validation_percentage: float = 15,  # TODO: ACCEPT AND SQUEEZE ZERO-HUNDRED TO ZERO-ONE range!
     testing_percentage: float = 0,
     verbose: bool = False,
-) -> OrderedDict:
+) -> Dict:
     """
     Magic hashing
 
@@ -132,7 +130,7 @@ def train_valid_test_split(
     :param testing_percentage:
     :param validation_percentage:
     :return:"""
-    result = collections.OrderedDict()
+    result = {}
 
     if verbose:
         print(categories)

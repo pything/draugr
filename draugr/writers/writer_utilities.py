@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import collections
+from typing import Dict
 
 import numpy
 
@@ -14,14 +15,14 @@ Created on 27/04/2019
 __all__ = ["metrics"]
 
 
-def metrics(array: numpy.ndarray) -> collections.OrderedDict:
+def metrics(array: numpy.ndarray) -> Dict:
     """
 
     :param array:
     :type array:
     :return:
     :rtype:"""
-    d = collections.OrderedDict()
+    d = {}
     d["mean"] = numpy.mean(array)
     d["std"] = numpy.std(array)
     d["min"] = numpy.amin(array)

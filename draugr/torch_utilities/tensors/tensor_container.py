@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __all__ = ["NamedTensorTuple"]
 
 from typing import Sequence, MutableMapping, Any

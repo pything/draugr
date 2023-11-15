@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __all__ = ["BaseFourierFeatureMLP"]
 __doc__ = (
     r""""Module containing models based upon the Fourier Feature Networks template."""

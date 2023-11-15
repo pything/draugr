@@ -17,7 +17,7 @@ from .metric_aggregator import *
 from .metric_collection import *
 from .metric_summary import *
 
-""" Sanitize namespace # https://stackoverflow.com/questions/61278110/excluding-modules-when-importing-everything-in-init-py
+IGNORE = """ Sanitize namespace # https://stackoverflow.com/questions/61278110/excluding-modules-when-importing-everything-in-init-py
 import types
 __all__ = [name for name, thing in globals().items()
           if not (name.startswith('_') or isinstance(thing, types.ModuleType))]

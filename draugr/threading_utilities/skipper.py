@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import queue
 import threading
 from typing import Sequence, MutableMapping, Any

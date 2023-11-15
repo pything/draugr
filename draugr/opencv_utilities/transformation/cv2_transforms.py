@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import types
 from typing import Any, List, Tuple, Callable
 

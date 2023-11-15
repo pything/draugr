@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import enum
 from enum import Enum
 from itertools import zip_longest

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""description"""
 __all__ = [

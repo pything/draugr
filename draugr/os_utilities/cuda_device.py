@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 from enum import Enum
 from typing import Iterable, Union

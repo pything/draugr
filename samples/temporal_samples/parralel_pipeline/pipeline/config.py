@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 TASK_QUEUE_1_NAME = "temporal-community-task-queue"
 
 SCHEDULE_1_NAME = "top-stories-every-10-hours"

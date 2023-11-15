@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import asyncio
 from datetime import timedelta
 from typing import List

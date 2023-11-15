@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import numpy
 
 NUMPY_TO_QGIS_TYPE_MAPPING = {  # Numpy type         C type      Description

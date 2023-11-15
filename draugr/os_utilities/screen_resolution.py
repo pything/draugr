@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __all__ = [
     "get_screen_resolution",
     "screen_res_tk",

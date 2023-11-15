@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import cv2
 import numpy
 from draugr.dlib_utilities.dlib_utilities import (
