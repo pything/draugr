@@ -1,2 +1,2 @@
-sorcery
 scikit-image #skimage
+sorcery

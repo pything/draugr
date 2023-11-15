@@ -23,7 +23,7 @@ import io
 
 from PIL import Image
 
-"""
+IGNORE = """
 1 (1-bit pixels, black and white, stored with one pixel per byte)
 
 L (8-bit pixels, black and white)

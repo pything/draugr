@@ -268,7 +268,7 @@ def pandas_mean_std_latex_table(
     )
 
 
-'''
+IGNORE = '''
 def pandas_mean_std_latex_table8(df: pandas.DataFrame,
                                 group_by: str,
                                 precision: int = 3,

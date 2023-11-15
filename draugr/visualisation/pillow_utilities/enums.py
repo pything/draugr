@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from enum import Enum
 
 from sorcery import assigned_names

@@ -254,10 +254,10 @@ def precision_recall_plot(
     :param color_cycle:
     :return:
     """
-    precision = dict()
-    recall = dict()
-    average_precision = dict()
-    thresholds = dict()
+    precision = {}
+    recall = {}
+    average_precision = {}
+    thresholds = {}
     for i in range(num_classes):
         precision[i], recall[i], thresholds[i] = precision_recall_curve(
             truth[:, i], score[:, i]
@@ -323,9 +323,9 @@ def roc_plot(
     num_decimals: int = 2,
 ) -> Figure:
     """description"""
-    fpr = dict()
-    tpr = dict()
-    roc_auc = dict()
+    fpr = {}
+    tpr = {}
+    roc_auc = {}
     for i in range(num_classes):
         fpr[i], tpr[i], _ = roc_curve(truth[:, i], score[:, i])
         roc_auc[i] = auc(fpr[i], tpr[i])

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from bisect import bisect_right
 
 __all__ = ["WarmupMultiStepLR"]

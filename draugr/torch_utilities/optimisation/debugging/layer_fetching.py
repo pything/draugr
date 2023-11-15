@@ -8,7 +8,7 @@ __doc__ = r"""
            """
 
 import functools
-from collections import OrderedDict
+
 from typing import Tuple, Sequence, MutableMapping, Any
 
 import torch
@@ -69,7 +69,7 @@ class IntermediateLayerGetter:
     def __call__(
         self, *args: Sequence[Any], **kwargs: MutableMapping[str, Any]
     ) -> Tuple:
-        ret = OrderedDict()
+        ret = {}
         handles = []
         for name, new_name in self.return_layers:
             if name == "":

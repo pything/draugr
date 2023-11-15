@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def add_service():
     """
     Add a service to the system.

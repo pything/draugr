@@ -5,7 +5,7 @@ __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
 
           If a tensorboard plugin exist when you are reading this, go use that :)
-          
+
           TODO: Finish
 
            Created on 31-03-2021

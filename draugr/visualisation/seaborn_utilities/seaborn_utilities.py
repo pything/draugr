@@ -65,7 +65,7 @@ def exponential_moving_average(
         assert len(scalars.shape) <= 1, "only support one dimensional series"
 
     last = next(iter(scalars))
-    smoothed = list()
+    smoothed = []
     for new in scalars:
         # 1st-order IIR low-pass filter to attenuate the higher-
         # frequency components of the time-series.

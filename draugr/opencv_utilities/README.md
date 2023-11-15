@@ -1,3 +1,1 @@
 # OpenCV Utilities
-
-

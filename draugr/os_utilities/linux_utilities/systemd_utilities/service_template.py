@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""description"""
 __all__ = [
@@ -9,18 +10,18 @@ __all__ = [
 SERVICE_TEMPLATE = """
 [Unit]
 Description = {description}
-After = network.target 
- 
+After = network.target
+
 [Service]
 Type = simple
 User = {service_user}
 Group = {service_group}
 ExecStart = {executable} {service_entry_point_path}
-Restart = {restart} 
+Restart = {restart}
 SyslogIdentifier = {service_name}
 RestartSec = 5
 TimeoutStartSec = infinity
- 
+
 [Install]
 WantedBy = {service_target}
 """

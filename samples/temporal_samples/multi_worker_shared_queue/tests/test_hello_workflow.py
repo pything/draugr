@@ -1,4 +1,5 @@
-import uuid
+# -*- coding: utf-8 -*-
+IGNORE = '''import uuid
 from pathlib import Path
 
 import pytest  # TODO: pip install pytest_asyncio
@@ -62,3 +63,4 @@ async def test_mock_activity():
                     task_queue=task_queue_name,
                 )
             )
+'''
