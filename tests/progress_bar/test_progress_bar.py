@@ -10,7 +10,7 @@ __doc__ = r"""
 from warg import ensure_in_sys_path, find_nearest_ancestral_relative
 
 ensure_in_sys_path(find_nearest_ancestral_relative("draugr").parent)
-from draugr.visualisation.progress import progress_bar
+from draugr.progress_bars import progress_bar
 
 
 def test_progress_bar():
