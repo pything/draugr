@@ -14,8 +14,8 @@ from itertools import count
 from typing import Iterator
 
 from draugr.python_utilities.platform_context import in_ipynb
-from draugr.visualisation.progress.eta_bar import ETABar
-from draugr.visualisation.progress.progress_bar import progress_bar
+from draugr.progress_bars.eta_bar import ETABar
+from draugr.progress_bars.auto_progress_bar import progress_bar
 
 from warg import LambdaContext
 

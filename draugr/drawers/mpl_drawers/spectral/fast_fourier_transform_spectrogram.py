@@ -15,7 +15,7 @@ import math
 
 import numpy
 from draugr.drawers.mpl_drawers.mpldrawer import MplDrawer
-from draugr.visualisation.progress import progress_bar
+from draugr.progress_bars import progress_bar
 from matplotlib import pyplot
 from matplotlib.gridspec import GridSpec
 
