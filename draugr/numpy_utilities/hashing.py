@@ -30,10 +30,14 @@ def positive_int_hash(
 ) -> int:
     """
 
-    :param hasher:
     :param s:
+    :type s: str
     :param limit_size:
+    :type limit_size: Optional[int]
+    :param hasher: Which hashing function to use
+    :type hasher: callable
     :return:
+    :rtype: int
     """
     pos_int = hasher(s.encode("utf-8")) & 0xFFFFFFFF
     if limit_size:  # Wrap around
