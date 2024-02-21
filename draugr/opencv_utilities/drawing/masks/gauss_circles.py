@@ -157,7 +157,7 @@ if __name__ == "__main__":
         if save_intermediate:
             show_image(
                 transparency,
-                wait=True
+                wait=True,
                 # save_path = basep/"eligrad-t.png"
             )
 
@@ -168,7 +168,7 @@ if __name__ == "__main__":
         if save_intermediate:
             show_image(
                 intensity,
-                wait=True
+                wait=True,
                 # save_path =  str(basep / "eligrad-i1.png")
             )
 
@@ -193,7 +193,7 @@ if __name__ == "__main__":
 
     show_image(
         draw_image(a, b, theta, inner_scale, True),
-        wait=True
+        wait=True,
         # save_path = str(basep/"eligrad.png")
     )
 

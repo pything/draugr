@@ -123,9 +123,9 @@ class BatchRandomCrop:
                 dtype=self.dtype,
                 device=self.device,
             )
-            padded[
-                :, :, self.padding : -self.padding, self.padding : -self.padding
-            ] = tensor
+            padded[:, :, self.padding : -self.padding, self.padding : -self.padding] = (
+                tensor
+            )
         else:
             padded = tensor
 
