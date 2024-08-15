@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -11,7 +10,7 @@ __all__ = []
 
 import os
 import tkinter as tk
-import xml.etree.cElementTree as ET
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from tkinter.filedialog import askdirectory
 
@@ -373,7 +372,7 @@ if __name__ == "__main__":
 
     data_path = askdirectory()
     lbl_directory.config(text=f"Directory: {data_path}")
-    files = Path(data_path2).glob("*.jpg")
+    files = Path("data_path2").glob("*.jpg")
 
     load_next()
 

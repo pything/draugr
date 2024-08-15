@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -15,13 +14,13 @@ __all__ = [
     "hostname_resolves",
 ]
 
-import sys
 import os
-from warg.os_utilities import is_windows
-from warg.functions import text_in_file
-from pathlib import Path
 import subprocess
-import platform
+import sys
+from pathlib import Path
+
+from warg.functions import text_in_file
+from warg.os_utilities import is_windows
 
 
 def in_ipynb(verbose: bool = False) -> bool:
@@ -79,7 +78,7 @@ def hostname_resolves(hostname: str) -> bool:
 
         socket.gethostbyname(hostname)
         return True
-    except socket.error:
+    except OSError:
         return False
 
 

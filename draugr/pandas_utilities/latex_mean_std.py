@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -12,10 +11,9 @@ from functools import partial
 
 import numpy
 import pandas
-from draugr.pandas_utilities.formatting import pandas_mean_std_bold_formatter
 
-from warg import Number, drop_unused_kws, passes_kws_to
-from warg import indent_lines
+from draugr.pandas_utilities.formatting import pandas_mean_std_bold_formatter
+from warg import Number, drop_unused_kws, indent_lines, passes_kws_to
 
 __all__ = [
     "pandas_mean_std",
@@ -44,7 +42,7 @@ def pandas_mean_std_to_str(
     level=1,
     axis=1,
 ) -> pandas.DataFrame:
-    """
+    r"""
     latex \pm plus minus
     :param level:
     :param axis:
@@ -56,7 +54,7 @@ def pandas_mean_std_to_str(
     """
     return (
         df.xs(mean_col, axis=axis, level=level).round(precision).astype(str)
-        + " \pm "
+        + r" \pm "
         + df.xs(std_col, axis=axis, level=level).round(precision).astype(str)
     )
 
@@ -173,13 +171,15 @@ def pandas_to_latex_clean(
     """
     if True:
         if not isinstance(entry_provider_df.columns, pandas.MultiIndex):
-            entry_provider_df.columns = entry_provider_df.columns.str.replace("_", "\_")
+            entry_provider_df.columns = entry_provider_df.columns.str.replace(
+                "_", r"\_"
+            )
         else:
             entry_provider_df.columns = [
-                _name.replace("_", "\_") if _name else _name
+                _name.replace("_", r"\_") if _name else _name
                 for _name in entry_provider_df.columns
             ]
-            """
+            r"""
 entry_provider_df.columns = pandas.MultiIndex(levels=[
 [col.replace('_', '\_') for col in lvl]
 for lvl in entry_provider_df.columns.levels
@@ -190,11 +190,11 @@ names=entry_provider_df.columns.names
 """
 
         if not isinstance(entry_provider_df.index, pandas.MultiIndex):
-            entry_provider_df.index = entry_provider_df.index.str.replace("_", "\_")
+            entry_provider_df.index = entry_provider_df.index.str.replace("_", r"\_")
         else:
             entry_provider_df.index = pandas.MultiIndex(
                 levels=[
-                    [col.replace("_", "\_") for col in lvl]
+                    [col.replace("_", r"\_") for col in lvl]
                     for lvl in entry_provider_df.index.levels
                 ],
                 codes=entry_provider_df.index.codes,
@@ -202,11 +202,11 @@ names=entry_provider_df.columns.names
             )
 
         entry_provider_df.columns.names = [
-            _name.replace("_", "\_") if _name else _name
+            _name.replace("_", r"\_") if _name else _name
             for _name in entry_provider_df.columns.names
         ]
         entry_provider_df.index.names = [
-            _name.replace("_", "\_") if _name else _name
+            _name.replace("_", r"\_") if _name else _name
             for _name in entry_provider_df.index.names
         ]
 
@@ -220,7 +220,7 @@ names=entry_provider_df.columns.names
 
     if header_rotation:
         header = [
-            f"\\rotatebox{{{header_rotation}}}" + "{" + "\_".join(c.split("_")) + "}"
+            f"\\rotatebox{{{header_rotation}}}" + "{" + r"\_".join(c.split("_")) + "}"
             for c in entry_provider_df.columns
         ]
     else:
@@ -257,14 +257,14 @@ def pandas_mean_std_latex_table(
     """
     return (
         f"""\\begin{{table}}
-  \caption{{{tab_label.replace('_', ' ')}}}
-  \label{{tab:{tab_label}}}
-  \centering
+  \\caption{{{tab_label.replace('_', ' ')}}}
+  \\label{{tab:{tab_label}}}
+  \\centering
 """
         + indent_lines(pandas_mean_std_latex_tabular(df, group_by, **kwargs))[
             :-truncate_n_tabular_symbols
         ]
-        + """\end{table}"""
+        + r"""\end{table}"""
     )
 
 
@@ -291,7 +291,7 @@ def pandas_mean_std_latex_table8(df: pandas.DataFrame,
     """
     # Consider values equal, when rounded results are equal
     # otherwise, it may look surprising in the table where they seem identical
-    a = float(x.split('\pm')[0])
+    a = float(x.split('\\pm')[0])
 
     if round(a, precision) == round(value, precision):
       return f"$\\mathbf{{{x}}}$"
@@ -301,13 +301,13 @@ def pandas_mean_std_latex_table8(df: pandas.DataFrame,
   asds = {column[0]:partial(bold_formatter,
                             value=out[column].max()) for column in out.columns if 'mean' in column}
 
-  out = (out.xs('mean', axis=1, level=1).round(precision).astype(str) + ' \pm ' + out.xs('std', axis=1, level=1).round(precision).astype(str))
+  out = (out.xs('mean', axis=1, level=1).round(precision).astype(str) + ' \\pm ' + out.xs('std', axis=1, level=1).round(precision).astype(str))
 
   return out.to_latex(index=True,
                       escape=False,
                       formatters=asds,
-                      header=[f'\\rotatebox{{{header_rotation}}}' + '{' + "\_".join(c.split("_")) + '}' for c in out.columns]
-                      )  # .replace('textbackslash ', '').replace('\$', '$')
+                      header=[f'\\rotatebox{{{header_rotation}}}' + '{' + "\\_".join(c.split("_")) + '}' for c in out.columns]
+                      )  # .replace('textbackslash ', '').replace('\\$', '$')
 '''
 
 if __name__ == "__main__":

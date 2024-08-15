@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -12,6 +11,7 @@ __all__ = ["VariationalAutoEncoder"]
 from abc import abstractmethod
 
 import torch
+
 from draugr.torch_utilities.tensors.to_tensor import to_tensor
 
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -9,10 +8,11 @@ __doc__ = r"""
 
 __all__ = ["get_num_parameters"]
 
+from torch import nn
+
 from draugr.torch_utilities.optimisation.parameters.trainable import (
     trainable_parameters,
 )
-from torch import nn
 
 
 def get_num_parameters(model: nn.Module, *, only_trainable: bool = False) -> int:

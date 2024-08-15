@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -9,8 +8,9 @@ __doc__ = r"""
 
 from typing import Sequence
 
-from draugr.python_utilities.platform_context import in_ipynb
 from matplotlib import animation, pyplot
+
+from draugr.python_utilities.platform_context import in_ipynb
 
 __all__ = ["replay_frames"]
 

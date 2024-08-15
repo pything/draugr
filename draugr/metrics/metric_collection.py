@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 
-from typing import Sequence, MutableMapping, Any
+from typing import Any, MutableMapping, Sequence
 
-from draugr.metrics.metric_aggregator import MetricAggregator, MEASURES
+from draugr.metrics.metric_aggregator import MEASURES, MetricAggregator
 
 __all__ = ["MetricCollection"]
 

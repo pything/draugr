@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+
 import logging
-from typing import Sequence, MutableMapping, Any, Callable, Iterable
+from typing import Callable, Iterable, MutableMapping, Sequence
 
 import numpy
 import torch
+from numpy import prod
+from torch import nn
+from torch.nn import Module
+
 from draugr.random_utilities import seed_stack
 from draugr.torch_utilities.architectures.architecture import Architecture
 from draugr.torch_utilities.optimisation.parameters.initialisation import (
@@ -12,11 +16,9 @@ from draugr.torch_utilities.optimisation.parameters.initialisation import (
     fan_in_init,
 )
 from draugr.torch_utilities.tensors.to_tensor import to_tensor
-from numpy import prod
-from torch import nn
-from torch.nn import Module
-
 from warg import NOD
+
+logger = logging.getLogger(__name__)
 
 __author__ = "Christian Heider Lindbjerg"
 
@@ -168,7 +170,7 @@ class MLP(Architecture):
             new_input_shape = input_shape
         elif isinstance(input_shape, int):
             new_input_shape = (input_shape,)
-            logging.info(
+            logger.info(
                 f"Inflating input shape {input_shape} to vectorised input shape {new_input_shape}"
             )
         else:
@@ -188,7 +190,7 @@ class MLP(Architecture):
             new_output_shape = output_shape
         elif isinstance(output_shape, int):
             new_output_shape = (output_shape,)
-            logging.info(
+            logger.info(
                 f"Inflating output shape {output_shape} to vectorised output shape {new_output_shape}"
             )
         else:

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -13,7 +12,7 @@ import numpy
 from matplotlib import pyplot
 from scipy.signal import spectrogram, welch
 
-from warg import Number, drop_unused_kws, passes_kws_to, next_pow_2
+from warg import Number, drop_unused_kws, next_pow_2, passes_kws_to
 
 __all__ = ["spectral_plot", "ltas_plot", "spectrum_plot", "fft_plot"]
 

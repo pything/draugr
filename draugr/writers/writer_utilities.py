@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-import collections
 from typing import Dict
 
 import numpy

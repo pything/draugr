@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -8,13 +7,14 @@ __doc__ = r"""
            """
 
 import sys
-from typing import Sequence, TextIO, Tuple, Union, Callable
+from typing import Callable, Sequence, TextIO, Tuple, Union
 
 import numpy
 import torch
-from draugr.torch_utilities import assume_model_dtype, assume_model_device
-from draugr.torch_utilities.optimisation.parameters.counting import get_num_parameters
 from torch import nn
+
+from draugr.torch_utilities import assume_model_device, assume_model_dtype
+from draugr.torch_utilities.optimisation.parameters.counting import get_num_parameters
 
 __all__ = ["get_model_complexity_info", "MODULES_MAPPING"]
 

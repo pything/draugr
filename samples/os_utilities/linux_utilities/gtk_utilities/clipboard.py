@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 
 from gi.repository import Gtk, Gdk
 
 
 class Hello(Gtk.Window):
     def __init__(self):
-        super(Hello, self).__init__()
+        super().__init__()
         clipboard_ = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         clipboard_.set_text("hello world", -1)
         Gtk.main_quit()

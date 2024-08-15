@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -8,7 +7,7 @@ __doc__ = r"""
            """
 
 from threading import Thread
-from typing import Any, Union, Sequence, MutableMapping, Tuple
+from typing import Any, MutableMapping, Sequence, Tuple, Union
 
 import cv2
 

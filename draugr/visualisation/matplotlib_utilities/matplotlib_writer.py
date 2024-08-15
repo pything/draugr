@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -10,22 +9,22 @@ __doc__ = r"""
 __all__ = []
 
 from pathlib import Path
-from typing import Sequence, Mapping, Union, MutableMapping
+from typing import Mapping, MutableMapping, Sequence, Union
 
 import numpy
 from PIL import Image
-from draugr.writers import (
-    Writer,
-    ImageWriterMixin,
-    HistogramWriterMixin,
-    BarWriterMixin,
-    LineWriterMixin,
-    SpectrogramWriterMixin,
-    FigureWriterMixin,
-)
 from matplotlib import pyplot
 from matplotlib.figure import Figure
 
+from draugr.writers import (
+    BarWriterMixin,
+    FigureWriterMixin,
+    HistogramWriterMixin,
+    ImageWriterMixin,
+    LineWriterMixin,
+    SpectrogramWriterMixin,
+    Writer,
+)
 from warg import passes_kws_to
 
 

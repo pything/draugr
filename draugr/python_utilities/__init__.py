@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -20,5 +19,5 @@ from .iterators import *
 from .matrix import *
 from .platform_context import *
 from .sockets import *
-from .torch_like_channel_transformation import *
 from .styling import *
+from .torch_like_channel_transformation import *

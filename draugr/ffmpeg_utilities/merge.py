@@ -1,12 +1,15 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+
+__doc__ = r"""
+"""
 import subprocess
 from pathlib import Path
 from typing import Optional
 
 from draugr.ffmpeg_utilities.extract import AUDIO_FORMAT
-
-from warg import Number, identity
-from warg import ensure_existence
+from warg import Number, ensure_existence, identity
 
 __all__ = ["merge_frames"]
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 from typing import (
@@ -9,9 +8,9 @@ from typing import (
     Iterable,
     List,
     Mapping,
+    MutableMapping,
     Optional,
     Sized,
-    MutableMapping,
 )
 
 from pathos.helpers import cpu_count
@@ -52,8 +51,7 @@ def _sequential(
     length = min(len(iterable) for iterable in iterables if isinstance(iterable, Sized))
 
     # Create sequential generator
-    for item in tqdm(map(function, *iterables, **func_kws), total=length, **kwargs):
-        yield item
+    yield from tqdm(map(function, *iterables, **func_kws), total=length, **kwargs)
 
 
 def _parallel(
@@ -90,12 +88,11 @@ def _parallel(
     pool = Pool(num_cpus)  # Create parallel generator
     map_func = getattr(pool, map_type)
 
-    for item in tqdm(
+    yield from tqdm(
         map_func(function, *iterables, (list(func_kws.values()),) * length),
         total=length,
         **kwargs
-    ):
-        yield item
+    )
 
     pool.clear()
 

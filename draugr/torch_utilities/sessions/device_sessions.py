@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -8,9 +7,9 @@ __doc__ = r"""
            """
 
 import torch
-from draugr.torch_utilities import global_torch_device
 from torch.nn import Module
 
+from draugr.torch_utilities import global_torch_device
 from warg import AlsoDecorator
 
 __all__ = ["TorchCpuSession", "TorchCudaSession", "TorchDeviceSession"]

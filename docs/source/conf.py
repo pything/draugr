@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 import sys
 from pathlib import Path
 
-from warg import cprint, is_windows, is_linux, is_mac
+from warg import cprint, is_linux, is_mac, is_windows
 
 PACKAGE_ROOT = Path(__file__).parent.parent.parent  # / "draugr"
 cprint(PACKAGE_ROOT)

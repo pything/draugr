@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -9,7 +8,7 @@ __doc__ = r"""
 
 __all__ = ["BidirectionalIterator", "prev"]
 
-from typing import Iterator, Any
+from typing import Any, Iterator
 
 
 class BidirectionalIterator(Iterator):

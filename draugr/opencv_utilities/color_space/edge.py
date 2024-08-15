@@ -1,11 +1,18 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 from enum import Enum
 from typing import MutableMapping
 
 import cv2
-from draugr.opencv_utilities.namespaces.enums import MorphShapeEnum, MorphTypeEnum
 from sorcery import assigned_names
 
+from draugr.opencv_utilities.namespaces.enums import MorphShapeEnum, MorphTypeEnum
 from warg import next_odd
 
 __all__ = ["to_edge", "ToEdgeMethodEnum", "CannyApertureSize"]

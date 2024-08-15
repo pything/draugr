@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -14,8 +13,7 @@ from typing import List, Union
 from pandas.core.generic import NDFrame
 from sorcery import assigned_names
 
-from warg import Number
-from warg import ensure_existence
+from warg import Number, ensure_existence
 
 __all__ = [
     "color_highlight_extreme",

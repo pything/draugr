@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -27,6 +26,7 @@ use backprop to chart dependencies. Your deep learning code will often contain c
 from random import random
 
 import torch
+
 from draugr.torch_utilities.tensors import to_tensor
 
 __all__ = ["overfit_single_batch"]

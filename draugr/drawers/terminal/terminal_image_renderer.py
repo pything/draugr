@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -15,7 +14,7 @@ from typing import Any, List, Tuple
 import numpy
 from PIL import Image
 
-from warg import color, Number
+from warg import Number, color
 
 __all__ = ["render_file", "terminalise_image", "terminal_render_image"]
 

@@ -1,4 +1,11 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 import asyncio
 from datetime import timedelta
 from pathlib import Path
@@ -16,6 +23,8 @@ from warg import ensure_in_sys_path
 ensure_in_sys_path(Path(__file__).parent.parent)
 from pipeline.config import TASK_QUEUE_1_NAME, WORKFLOW_1_NAME
 from pipeline.workflows.workflow1 import Workflow1
+from config import HOST, NAMESPACE
+from pipeline.config import SCHEDULE_1_NAME, HOST
 
 
 async def main():

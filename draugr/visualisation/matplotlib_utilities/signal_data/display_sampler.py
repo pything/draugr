@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -12,7 +11,7 @@ import numpy
 __all__ = ["DisplaySampler"]
 
 
-class DisplaySampler(object):
+class DisplaySampler:
     """
     # A class that will downsample the data and recompute when zoomed.
     """

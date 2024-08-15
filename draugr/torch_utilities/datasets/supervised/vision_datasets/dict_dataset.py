@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -9,21 +8,20 @@ __doc__ = r"""
 
 import random
 from pathlib import Path
-from typing import Iterable, Tuple, Callable
+from typing import Callable, Iterable, Tuple
 
 from torch.utils.data import DataLoader
 from torchvision.datasets import VisionDataset  # TODO: Do not need to be images
-
-__all__ = ["DictDatasetFolder", "SplitDictDatasetFolder"]
-
 from torchvision.datasets.folder import has_file_allowed_extension
 
-from draugr.numpy_utilities import (
+from draugr.numpy_utilities.datasets import (
     SplitEnum,
     build_flat_dataset,
     build_shallow_categorical_dataset,
     select_split,
 )
+
+__all__ = ["DictDatasetFolder", "SplitDictDatasetFolder"]
 
 
 class SplitDictDatasetFolder(VisionDataset):

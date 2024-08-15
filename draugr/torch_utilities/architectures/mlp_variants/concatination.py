@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-from typing import Iterable, List, Sequence, MutableMapping
+from typing import Iterable, List, MutableMapping, Sequence
 
 import numpy
 import torch
+
 from draugr.torch_utilities.architectures.mlp import MLP
 from draugr.torch_utilities.tensors.to_tensor import to_tensor
 

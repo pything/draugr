@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -7,15 +6,15 @@ __doc__ = r"""
            Created on 25/03/2020
            """
 
-import collections
 import hashlib
 import re
 import sys
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, Iterable, OrderedDict, Sequence
-from sorcery import assigned_names
+from typing import Any, Dict, Iterable, Sequence
+
 import numpy
+from sorcery import assigned_names
 
 __all__ = ["SplitEnum", "SplitIndexer", "train_valid_test_split", "select_split"]
 

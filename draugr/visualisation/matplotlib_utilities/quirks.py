@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -8,11 +7,12 @@ __doc__ = r"""
            """
 
 from enum import Enum
-from typing import Sequence, Optional
+from typing import Optional, Sequence
 
-from draugr.visualisation.matplotlib_utilities.styles.cyclers import simple_hatch_cycler
 from matplotlib import cycler, pyplot, rcParams
 from matplotlib.axes import Axes
+
+from draugr.visualisation.matplotlib_utilities.styles.cyclers import simple_hatch_cycler
 
 __all__ = [
     "fix_edge_gridlines",

@@ -1,4 +1,11 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 import datetime
 import getpass
 import socket
@@ -6,7 +13,7 @@ import socket
 try:
     import win32com.client
 except ModuleNotFoundError as e:
-    raise ModuleNotFoundError((e, "missing win32com.client"))
+    raise ModuleNotFoundError((e, "missing win32com.client"))  # pip install pywin32
 
 from draugr.os_utilities.windows_utilities.task_scheduler.enums import (
     TaskActionTypeEnum,
@@ -123,7 +130,7 @@ def new_logon_trigger(
     """
     trigger = task_def.Triggers.Create(TaskTriggerEnum.TASK_TRIGGER_LOGON.value)
     trigger.Id = "LogonTriggerId"
-    trigger.UserId = f"{domain}\{username}"  # Must be a valid user account
+    trigger.UserId = rf"{domain}\{username}"  # Must be a valid user account
 
 
 def new_boot_trigger(task_def: win32com.client.CDispatch) -> None:
@@ -208,7 +215,7 @@ def set_task_activity(
 
 
 if __name__ == "__main__":
-    print(f"{socket.gethostname()}\{getpass.getuser()}")
+    print(rf"{socket.gethostname()}\{getpass.getuser()}")
 
     if True:
         delete_task("test_task")

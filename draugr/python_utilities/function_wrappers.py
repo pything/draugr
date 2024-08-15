@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -15,7 +14,7 @@ __all__ = [
 ]
 
 from collections import namedtuple
-from typing import MutableMapping, Tuple, Any, Callable
+from typing import Any, Callable, MutableMapping, Tuple
 
 import wrapt
 

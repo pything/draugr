@@ -1,6 +1,13 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 import types
-from typing import Any, List, Tuple, Callable
+from typing import Any, Callable, List, Tuple
 
 import cv2
 import numpy
@@ -35,7 +42,7 @@ from draugr.opencv_utilities.bounding_boxes.evaluation import (
 from warg import TripleNumber
 
 
-class CV2Compose(object):
+class CV2Compose:
     """Composes several augmentations together.
     Args:
     transforms (List[Transform]): list of transforms to compose.
@@ -56,7 +63,7 @@ class CV2Compose(object):
         return img, boxes, labels
 
 
-class Lambda(object):
+class Lambda:
     """Applies a lambda as a transform."""
 
     def __init__(self, lambd: Callable):
@@ -67,12 +74,12 @@ class Lambda(object):
         return self.lambd(img, boxes, labels)
 
 
-class ConvertFromInts(object):
+class ConvertFromInts:
     def __call__(self, image: Any, boxes: Any = None, labels: Any = None) -> Tuple:
         return image.astype(numpy.float32), boxes, labels
 
 
-class SubtractMeans(object):
+class SubtractMeans:
     """description"""
 
     def __init__(self, mean: Tuple):
@@ -84,7 +91,7 @@ class SubtractMeans(object):
         return image.astype(numpy.float32), boxes, labels
 
 
-class CV2ToAbsoluteCoords(object):
+class CV2ToAbsoluteCoords:
     def __call__(self, image: Any, boxes: Any = None, labels: Any = None) -> Tuple:
         height, width, channels = image.shape
         boxes[:, 0] *= width
@@ -95,7 +102,7 @@ class CV2ToAbsoluteCoords(object):
         return image, boxes, labels
 
 
-class CV2ToPercentCoords(object):
+class CV2ToPercentCoords:
     def __call__(
         self,
         image: numpy.ndarray,
@@ -111,7 +118,7 @@ class CV2ToPercentCoords(object):
         return image, boxes, labels
 
 
-class CV2Resize(object):
+class CV2Resize:
     """description"""
 
     def __init__(self, size: int = 300):
@@ -127,7 +134,7 @@ class CV2Resize(object):
         return image, boxes, labels
 
 
-class CV2RandomSaturation(object):
+class CV2RandomSaturation:
     """description"""
 
     def __init__(self, lower: float = 0.5, upper: float = 1.5):
@@ -148,7 +155,7 @@ class CV2RandomSaturation(object):
         return image, boxes, labels
 
 
-class CV2RandomHue(object):
+class CV2RandomHue:
     """description"""
 
     def __init__(self, delta: float = 18.0):
@@ -168,7 +175,7 @@ class CV2RandomHue(object):
         return image, boxes, labels
 
 
-class CV2RandomLightingNoise(object):
+class CV2RandomLightingNoise:
     """description"""
 
     def __init__(self):
@@ -187,7 +194,7 @@ class CV2RandomLightingNoise(object):
         return image, boxes, labels
 
 
-class CV2ConvertColor(object):
+class CV2ConvertColor:
     """description"""
 
     def __init__(self, current, transform):
@@ -215,7 +222,7 @@ class CV2ConvertColor(object):
         return image, boxes, labels
 
 
-class CV2RandomContrast(object):
+class CV2RandomContrast:
     """description"""
 
     def __init__(self, lower: float = 0.5, upper: float = 1.5):
@@ -237,7 +244,7 @@ class CV2RandomContrast(object):
         return image, boxes, labels
 
 
-class CV2RandomBrightness(object):
+class CV2RandomBrightness:
     """description"""
 
     def __init__(self, delta: float = 32):
@@ -257,7 +264,7 @@ class CV2RandomBrightness(object):
         return image, boxes, labels
 
 
-class CV2RandomSampleCrop(object):
+class CV2RandomSampleCrop:
     """Crop
     Arguments:
     img (Image): the image being input during training
@@ -366,7 +373,7 @@ class CV2RandomSampleCrop(object):
                 return current_image, current_boxes, current_labels
 
 
-class CV2Expand(object):
+class CV2Expand:
     """description"""
 
     def __init__(self, mean: float):
@@ -399,7 +406,7 @@ class CV2Expand(object):
         return image, boxes, labels
 
 
-class CV2RandomMirror(object):
+class CV2RandomMirror:
     def __call__(
         self, image: numpy.ndarray, boxes: numpy.ndarray, classes: numpy.ndarray
     ) -> Tuple:
@@ -411,7 +418,7 @@ class CV2RandomMirror(object):
         return image, boxes, classes
 
 
-class CV2SwapChannels(object):
+class CV2SwapChannels:
     """Transforms a tensorized image by swapping the channels in the order
     specified in the swap tuple.
     Args:
@@ -435,7 +442,7 @@ class CV2SwapChannels(object):
         return image
 
 
-class CV2PhotometricDistort(object):
+class CV2PhotometricDistort:
     """description"""
 
     def __init__(self):

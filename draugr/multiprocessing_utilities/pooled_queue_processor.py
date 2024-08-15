@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 __author__ = "Christian Heider Lindbjerg"
 
 import multiprocessing
@@ -14,7 +13,7 @@ import cloudpickle
 __all__ = ["CloudPickleBase", "PooledQueueTask", "PooledQueueProcessor"]
 
 
-class CloudPickleBase(object):
+class CloudPickleBase:
     """
     Uses cloudpickle to serialize contents (otherwise multiprocessing tries to use pickle)
     :param x: (Any) the variable you wish to wrap for pickling with cloudpickle"""
@@ -50,7 +49,7 @@ class PooledQueueTask(ABC):
         raise NotImplemented
 
 
-class PooledQueueProcessor(object):
+class PooledQueueProcessor:
     """
     This is a workaround of Pythons extremely slow interprocess communication pipes.
     The ideal solution would be to use a multiprocessing.queue, but it apparently communication is band

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -10,10 +9,11 @@ __doc__ = r"""
 from contextlib import contextmanager
 from itertools import tee
 
+from torch.nn import Module
+
 from draugr.torch_utilities.optimisation.parameters.freezing.parameters import (
     freeze_parameters,
 )
-from torch.nn import Module
 
 __all__ = ["freeze_model", "frozen_model"]
 

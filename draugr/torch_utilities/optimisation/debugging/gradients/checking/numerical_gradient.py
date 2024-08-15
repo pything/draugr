@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -14,13 +13,13 @@ import math
 from typing import Callable
 
 import torch
+
 from draugr.torch_utilities.optimisation.parameters import (
     named_trainable_parameters,
     normal_init_weights,
     trainable_parameters,
 )
 from draugr.torch_utilities.sessions import TorchEvalSession
-
 from warg import ContextWrapper
 
 

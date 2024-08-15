@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -20,14 +19,14 @@ from pathlib import Path
 from typing import Optional, Tuple, Union
 
 import torch
-from draugr.torch_utilities.persistence.config import (
-    ensure_directory_exist,
-    save_config,
-)
 from torch import nn
 from torch.nn.modules.module import Module
 from torch.optim import Optimizer
 
+from draugr.torch_utilities.persistence.config import (
+    ensure_directory_exist,
+    save_config,
+)
 from warg import drop_unused_kws, passes_kws_to
 
 PARAMETER_EXTENSION = ".parameters"

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 __author__ = "Christian Heider Lindbjerg"
@@ -10,7 +9,7 @@ __doc__ = r"""
 __all__ = ["LineWriterMixin"]
 
 from abc import ABC, abstractmethod
-from typing import Mapping, Sequence, MutableMapping
+from typing import Mapping, MutableMapping, Sequence
 
 
 class LineWriterMixin(ABC):

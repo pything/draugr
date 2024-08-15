@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -47,7 +46,7 @@ def uahsduiasdj():
         """ """
 
         def __init__(self, parent):
-            super(Panel, self).__init__(parent, -1)
+            super().__init__(parent, -1)
             self.SetSize(SIZE)
             self.SetBackgroundStyle(wx.BG_STYLE_CUSTOM)
             self.Bind(wx.EVT_PAINT, self.on_paint)
@@ -84,7 +83,7 @@ def uahsduiasdj():
 
         def __init__(self):
             style = wx.DEFAULT_FRAME_STYLE & ~wx.RESIZE_BORDER & ~wx.MAXIMIZE_BOX
-            super(Frame, self).__init__(None, -1, "Camera Viewer", style=style)
+            super().__init__(None, -1, "Camera Viewer", style=style)
             panel = Panel(self)
             self.Fit()
 

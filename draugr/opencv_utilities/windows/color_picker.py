@@ -1,9 +1,17 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 from pathlib import Path
 from typing import Iterable
 
 import cv2
 import numpy
+
 from draugr.opencv_utilities.color_space.threshold import hsv_min_max_clip_mask
 from draugr.opencv_utilities.windows.elements import add_trackbar
 from draugr.opencv_utilities.windows.image import show_image

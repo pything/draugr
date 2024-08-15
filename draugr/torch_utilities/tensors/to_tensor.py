@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 from typing import Iterable, Sequence, Union
 
 import numpy
@@ -98,10 +97,10 @@ if __name__ == "__main__":
     print(to_tensor((a, a)))
 
     print(to_tensor((torch.zeros((2, 2)), (torch.zeros((2, 2))))).shape)
-    print(to_tensor(([torch.zeros((2, 2)), torch.zeros((2, 2))])).shape)
+    print(to_tensor([torch.zeros((2, 2)), torch.zeros((2, 2))]).shape)
     print(to_tensor(([torch.zeros((2, 2))], [torch.zeros((2, 2))])).shape)
     print(to_tensor(([[[torch.zeros((2, 2))]]], [[[torch.zeros((2, 2))]]])).shape)
-    print(to_tensor(([[torch.zeros((2, 2))], [torch.zeros((2, 2))]])).shape)
+    print(to_tensor([[torch.zeros((2, 2))], [torch.zeros((2, 2))]]).shape)
     print(to_tensor([(torch.zeros((2, 2))), (torch.zeros((2, 2)))]).shape)
     print(to_tensor({(torch.zeros((2, 2))), (torch.zeros((2, 2)))}).shape)
     print(to_tensor(((torch.zeros((2, 2))), (torch.zeros((2, 2))))).shape)

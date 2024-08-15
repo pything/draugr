@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -8,8 +7,7 @@ __doc__ = r"""
            """
 
 import functools
-
-from typing import Tuple, Sequence, MutableMapping, Any
+from typing import Any, MutableMapping, Sequence, Tuple
 
 import torch
 from torch import nn

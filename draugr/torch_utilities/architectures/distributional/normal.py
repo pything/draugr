@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import time
-from typing import List, Sequence, MutableMapping, Callable
+from typing import Callable, List, MutableMapping, Sequence
 
 import torch
-from draugr.torch_utilities.architectures.mlp import MLP
-from draugr.torch_utilities.optimisation.parameters.initialisation import fan_in_init
 from torch import nn
 from torch.distributions import MultivariateNormal, Normal
+
+from draugr.torch_utilities.architectures.mlp import MLP
+from draugr.torch_utilities.optimisation.parameters.initialisation import fan_in_init
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = ""

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import torch
 
@@ -9,7 +8,7 @@ __author__ = "Christian Heider Lindbjerg"
 __all__ = ["TensoriseMixin"]
 
 
-class TensoriseMixin(object):
+class TensoriseMixin:
     """
     Tensorise attributes at set"""
 

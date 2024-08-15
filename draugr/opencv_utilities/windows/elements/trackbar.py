@@ -1,9 +1,16 @@
-# -*- coding: utf-8 -*-
-from typing import Optional, Callable
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
+from typing import Callable, Optional
 
 import cv2
 
-from warg import sink, Number
+from warg import Number, sink
 
 __all__ = ["add_trackbar"]
 

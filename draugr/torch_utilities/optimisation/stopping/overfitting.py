@@ -1,8 +1,13 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+
+__doc__ = r"""
+"""
 import contextlib
 from typing import Callable
 
-from warg import sink, Number
+from warg import Number, sink
 
 __all__ = ["ImprovementDetector", "OverfitDetector"]
 

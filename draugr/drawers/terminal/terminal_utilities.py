@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -8,7 +7,7 @@ __doc__ = r"""
            """
 __all__ = ["scale"]
 
-from typing import Sequence, List
+from typing import List, Sequence
 
 import numpy
 

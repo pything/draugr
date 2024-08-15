@@ -1,7 +1,13 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
 import queue
 import threading
-from typing import Sequence, MutableMapping, Any
+from typing import Any, MutableMapping, Sequence
 
 __all__ = ["Skipper"]
 

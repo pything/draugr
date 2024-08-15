@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 __author__ = "Christian Heider Lindbjerg"
@@ -9,9 +8,10 @@ __all__ = ["add_early_stopping_key_combination", "CaptureEarlyStop"]
 
 import contextlib
 from time import sleep
-from typing import Callable, Iterable, Sequence, MutableMapping, Any
+from typing import Any, Callable, Iterable, MutableMapping, Sequence
 
 from pynput.keyboard import KeyCode
+
 from draugr.python_utilities.styling import sprint
 from warg import GDKC, drop_unused_kws, passes_kws_to
 

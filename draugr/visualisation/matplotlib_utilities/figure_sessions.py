@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -94,7 +93,7 @@ class StyleSession(AlsoDecorator):
         prop_cycler: Optional[Cycler] = line_cycler + color_cycler,
         latex_path: Path = Path(
             r"C:\Users\deter\AppData\Local\Programs\MiKTeX\miktex\bin\x64\latex.exe"
-        )
+        ),
         # Path('latex')
     ):
         """

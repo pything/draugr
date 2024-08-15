@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import math
 
 import torch
+
 from draugr.torch_utilities.system.constants import torch_pi
 
 __author__ = "Christian Heider Lindbjerg"

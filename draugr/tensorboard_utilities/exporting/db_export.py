@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -9,7 +8,7 @@ __doc__ = r"""
            Created on 17-03-2021
            """
 
-from typing import Sequence, MutableMapping, Any
+from typing import Any, MutableMapping, Sequence
 
 from draugr.tensorboard_utilities.exporting.event_export import TensorboardEventExporter
 

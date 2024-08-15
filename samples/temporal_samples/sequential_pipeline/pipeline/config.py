@@ -1,4 +1,12 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
+
 TASK_QUEUE_1_NAME = "temporal-community-task-queue"
 
 SCHEDULE_1_NAME = "top-stories-every-10-hours"

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -11,9 +10,10 @@ __all__ = ["plot_grad_flow"]
 
 import numpy
 import torch
-from draugr.torch_utilities.optimisation.parameters import normal_init_weights
 from matplotlib import pyplot
 from matplotlib.lines import Line2D
+
+from draugr.torch_utilities.optimisation.parameters import normal_init_weights
 
 
 def plot_grad_flow(

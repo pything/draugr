@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import random
 from typing import Any, Iterable, Sequence
 
@@ -24,8 +23,7 @@ def recycle(iterable: Iterable) -> Any:
     if not isinstance(iterable, Sequence):
         iterable = list(iterable)
     while True:
-        for element in random.sample(iterable, len(iterable)):
-            yield element
+        yield from random.sample(iterable, len(iterable))
 
 
 def batched_recycle(sized: Sequence, batch_size: int = 32) -> Any:

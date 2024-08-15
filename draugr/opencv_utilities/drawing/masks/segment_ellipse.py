@@ -1,4 +1,10 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 14/01/2020
+           """
+
 if __name__ == "__main__":
 
     def aisjhd():
