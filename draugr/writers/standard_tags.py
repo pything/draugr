@@ -1,4 +1,10 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+
+__doc__ = r"""
+"""
+
 from enum import Enum
 
 __all__ = [

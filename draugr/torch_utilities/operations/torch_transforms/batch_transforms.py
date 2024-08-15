@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -123,9 +122,9 @@ class BatchRandomCrop:
                 dtype=self.dtype,
                 device=self.device,
             )
-            padded[
-                :, :, self.padding : -self.padding, self.padding : -self.padding
-            ] = tensor
+            padded[:, :, self.padding : -self.padding, self.padding : -self.padding] = (
+                tensor
+            )
         else:
             padded = tensor
 

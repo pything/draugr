@@ -1,12 +1,20 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 from enum import Enum
 
 import cv2
+from sorcery import assigned_names
+
 from draugr.opencv_utilities.color_space.color import is_singular_channel
 from draugr.opencv_utilities.namespaces.color_conversion_enum import (
     ColorConversionEnum,
 )
-from sorcery import assigned_names
 
 __all__ = ["ToGrayMethodEnum", "to_gray"]
 

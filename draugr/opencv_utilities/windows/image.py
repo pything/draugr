@@ -1,7 +1,14 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 import os
 from pathlib import Path
-from typing import Union, Iterable
+from typing import Iterable, Union
 
 os.environ["OPENCV_IO_ENABLE_OPENEXR"] = "1"
 import cv2

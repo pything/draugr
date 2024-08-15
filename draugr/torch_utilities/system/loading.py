@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -14,6 +13,7 @@ from typing import Union
 
 import numpy
 import torch
+
 from draugr.torch_utilities.system.device import global_torch_device
 
 

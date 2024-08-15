@@ -1,4 +1,11 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 import logging
 
 
@@ -13,7 +20,7 @@ class ContextFilterWorstLevel(logging.Filter):
 
 
 # Create a logger object and add the filter
-logger = logging.getLogger()
+logger = logging.getLogger(__file__)
 logger.addFilter(ContextFilterWorstLevel())
 
 # Check the worst log level called later

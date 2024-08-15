@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -11,7 +10,7 @@ __all__ = ["CounterFilter"]
 
 from abc import ABCMeta
 from collections import Counter
-from typing import Optional, Iterable
+from typing import Iterable, Optional
 
 from warg import drop_unused_kws, is_none_or_zero_or_negative_or_mod_zero
 

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 from abc import ABC, abstractmethod
-from typing import Union, MutableMapping
+from typing import MutableMapping, Union
 
 import numpy
 import torch

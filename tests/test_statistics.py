@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -7,10 +6,11 @@ __doc__ = r"""
            Created on 17-12-2020
            """
 
+
 from warg import ensure_in_sys_path, find_nearest_ancestral_relative
 
 ensure_in_sys_path(find_nearest_ancestral_relative("draugr").parent)
-from draugr.numpy_utilities import root_mean_square
+from draugr.numpy_utilities.signal_utilities import root_mean_square
 
 
 def test_root_mean_square_signed(asad: int = 60):

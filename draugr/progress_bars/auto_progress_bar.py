@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -16,7 +15,7 @@ import tqdm
 from notus.notification import JobNotificationSession
 from sorcery import assigned_names
 
-from warg import drop_unused_kws, passes_kws_to, empty_str
+from warg import drop_unused_kws, empty_str, passes_kws_to
 
 __all__ = ["progress_bar"]
 

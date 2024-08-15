@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 __author__ = "Christian Heider Lindbjerg"
@@ -11,12 +10,12 @@ __doc__ = r"""
 __all__ = ["MplDrawer", "MockDrawer"]
 
 from abc import abstractmethod
-from typing import Any, Sequence, Tuple, MutableMapping
+from typing import Any, MutableMapping, Sequence, Tuple
 
 import matplotlib
-from draugr.drawers.drawer import Drawer
 from matplotlib import pyplot
 
+from draugr.drawers.drawer import Drawer
 
 # TODO: implement a key for closing the plot
 # close figure with spacebar

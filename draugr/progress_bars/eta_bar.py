@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -13,11 +12,11 @@ __all__ = ["ETABar"]
 
 from typing import Iterator
 
-from draugr.python_utilities import in_ipynb
 from progress.bar import Bar  # IT is shit
 from progress.colors import color  # shit
 
-from warg import passes_kws_to, drop_unused_kws
+from draugr.python_utilities import in_ipynb
+from warg import drop_unused_kws, passes_kws_to
 
 
 class ETABar(Bar, Iterator):

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-from typing import Sequence, MutableMapping, Any
+from typing import Any, MutableMapping, Sequence
 
 import pytest
 

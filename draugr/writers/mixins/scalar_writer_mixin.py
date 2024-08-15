@@ -1,11 +1,15 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+
+__doc__ = r"""
+"""
 from abc import ABC, abstractmethod
 from itertools import cycle
 from typing import MutableMapping
 
 from draugr.python_utilities import CounterFilter
-
-from warg import Number, passes_kws_to, drop_unused_kws
+from warg import Number, drop_unused_kws, passes_kws_to
 
 __all__ = ["ScalarWriterMixin"]
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -25,10 +24,10 @@ from enum import Enum
 from pathlib import Path
 
 import sh  # pip install sh
-from draugr import PROJECT_NAME
-from draugr.os_utilities.linux_utilities.user_utilities import make_user, remove_user
 from sorcery import assigned_names
 
+from draugr import PROJECT_NAME
+from draugr.os_utilities.linux_utilities.user_utilities import make_user, remove_user
 from warg import ContextWrapper
 from .service_template import (
     SERVICE_TEMPLATE,
@@ -51,7 +50,7 @@ def target_service_path(service_name, run_as: RunAsEnum = RunAsEnum.user):
 
 
 class RestartServiceEnum(Enum):
-    """
+    r"""
     Restart settings\Exit causes	 no	  always      on-success	    on-failure	    on-abnormal	on-abort	on-watchdog
     Clean exit code or signal	 	        X	          X
     Unclean exit code	 	                X	 	                        X

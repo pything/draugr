@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -53,13 +52,13 @@ def extract_scalars_as_csv(
             ),
             key=os.path.getctime,
         )
-        unique_event_files_parents = set(
-            [ef.parent for ef in max_load_time.rglob("events.out.tfevents.*")]
-        )
+        unique_event_files_parents = {
+            ef.parent for ef in max_load_time.rglob("events.out.tfevents.*")
+        }
         event_files = {max_load_time: unique_event_files_parents}
     else:
         event_files = {
-            a: set([ef.parent for ef in a.rglob("events.out.tfevents.*")])
+            a: {ef.parent for ef in a.rglob("events.out.tfevents.*")}
             for a in list(
                 AppPath(
                     "Adversarial Speech", "Christian Heider Nielsen"
@@ -145,13 +144,13 @@ def extract_tensors_as_csv(
             ),
             key=os.path.getctime,
         )
-        unique_event_files_parents = set(
-            [ef.parent for ef in max_load_time.rglob("events.out.tfevents.*")]
-        )
+        unique_event_files_parents = {
+            ef.parent for ef in max_load_time.rglob("events.out.tfevents.*")
+        }
         event_files = {max_load_time: unique_event_files_parents}
     else:
         event_files = {
-            a: set([ef.parent for ef in a.rglob("events.out.tfevents.*")])
+            a: {ef.parent for ef in a.rglob("events.out.tfevents.*")}
             for a in list(
                 AppPath(
                     "Adversarial Speech", "Christian Heider Nielsen"

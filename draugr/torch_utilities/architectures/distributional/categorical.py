@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 from typing import List, Tuple
 
 import numpy
 import torch
-from draugr.torch_utilities.architectures.mlp import MLP
-from draugr.torch_utilities.tensors.to_tensor import to_tensor
 from torch.distributions import Categorical
 from torch.nn import functional
+
+from draugr.torch_utilities.architectures.mlp import MLP
+from draugr.torch_utilities.tensors.to_tensor import to_tensor
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""

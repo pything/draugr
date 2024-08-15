@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-import logging
 import os
 
 __author__ = "Christian Heider Lindbjerg"
@@ -14,6 +12,10 @@ from draugr.numpy_utilities.datasets.splitting import (
 )
 from draugr.numpy_utilities.datasets.defaults import DEFAULT_ACCEPTED_FILE_FORMATS
 from warg import drop_unused_kws
+
+import logging
+
+logger = logging.getLogger(__name__)
 
 __all__ = ["build_shallow_categorical_dataset"]
 
@@ -48,19 +50,19 @@ def build_shallow_categorical_dataset(
         extensions = DEFAULT_ACCEPTED_FILE_FORMATS
 
     if not directory.exists():
-        logging.error(f"directory {directory} not found.")
+        logger.error(f"directory {directory} not found.")
         raise FileNotFoundError(f"directory {directory} not found.")
 
     categories_dict = {category: [] for category in next(os.walk(str(directory)))[1]}
-    logging.info(f"Found categories {categories_dict.keys()}")
+    logger.info(f"Found categories {categories_dict.keys()}")
 
     for c in categories_dict.keys():
         for sub_directory in sorted([Path(x[0]) for x in os.walk(str(directory / c))]):
-            logging.info(f"Looking for samples in {sub_directory}")
-            for extension in sorted(set(os.path.normcase(ext) for ext in extensions)):
+            logger.info(f"Looking for samples in {sub_directory}")
+            for extension in sorted({os.path.normcase(ext) for ext in extensions}):
                 extension = extension.lstrip(".")
                 files = list(sub_directory.glob(f"*.{extension}"))
-                logging.info(
+                logger.info(
                     f"Found {len(files)} samples of type {extension} for category {c}"
                 )
                 categories_dict[c].extend(files)

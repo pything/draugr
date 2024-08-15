@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+
 __all__ = ["BaseFourierFeatureMLP"]
 __doc__ = (
     r""""Module containing models based upon the Fourier Feature Networks template."""

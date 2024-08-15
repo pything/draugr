@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -10,11 +9,11 @@ __doc__ = r"""
 from typing import Callable
 
 import torch
-from draugr.torch_utilities.sessions.model_sessions import TorchEvalSession
-from draugr.torch_utilities.system.device import global_torch_device
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
+from draugr.torch_utilities.sessions.model_sessions import TorchEvalSession
+from draugr.torch_utilities.system.device import global_torch_device
 from warg import kws_sink
 
 __all__ = ["find_n_misclassified"]

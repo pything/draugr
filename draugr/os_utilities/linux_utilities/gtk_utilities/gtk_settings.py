@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -67,8 +66,7 @@ class GtkSettings(metaclass=SingletonMeta):
     @property
     def all_settings(self):
         """description"""
-        for i in self.settings.list_properties():  # getting all existing properties
-            yield i
+        yield from self.settings.list_properties()
 
     def __enter__(self):
         return self

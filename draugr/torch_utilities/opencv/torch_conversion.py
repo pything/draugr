@@ -1,4 +1,11 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 from typing import Tuple
 
 import numpy
@@ -10,7 +17,7 @@ __all__ = [
 ]
 
 
-class CV2ToImage(object):
+class CV2ToImage:
     def __call__(
         self,
         tensor: torch.Tensor,
@@ -24,7 +31,7 @@ class CV2ToImage(object):
         )
 
 
-class CV2ToTensor(object):
+class CV2ToTensor:
     def __call__(
         self,
         cvimage: numpy.ndarray,

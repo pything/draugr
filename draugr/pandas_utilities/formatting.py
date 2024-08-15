@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -29,7 +28,7 @@ def pandas_mean_std_bold_formatter(entry, value, *, precision: int = 3):
     """
     # Consider values equal, when rounded results are equal
     # otherwise, it may look surprising in the table where they seem identical
-    mean_entry = float(entry.split("\pm")[0])
+    mean_entry = float(entry.split(r"\pm")[0])
 
     if value is not None and round(mean_entry, precision) == round(value, precision):
         return f"$\\mathbf{{{entry}}}$"
@@ -59,7 +58,7 @@ def pandas_mean_std_color_formatter(
     """
     # Consider values equal, when rounded results are equal
     # otherwise, it may look surprising in the table where they seem identical
-    mean_entry = float(entry.split("\pm")[0])
+    mean_entry = float(entry.split(r"\pm")[0])
 
     if value is not None and round(mean_entry, precision) == round(value, precision):
         return f"$\\textcolor{{{color}}}{{{entry}}}$"

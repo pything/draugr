@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import math
-from typing import Iterable, Iterator, Sequence, Tuple, Any
+from typing import Any, Iterable, Iterator, Sequence, Tuple
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = """

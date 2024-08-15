@@ -1,9 +1,16 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 from typing import Callable
 
 import cv2
-from draugr.opencv_utilities import ButtonTypeEnum
 
+from draugr.opencv_utilities import ButtonTypeEnum
 from warg import sink
 
 __all__ = ["add_button"]

@@ -1,4 +1,9 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+
+__doc__ = r"""
+"""
 __all__ = ["NamedTensorTuple"]
 
 from typing import Sequence, MutableMapping, Any

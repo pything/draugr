@@ -1,5 +1,12 @@
-# -*- coding: utf-8 -*-
-from typing import List, Dict
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
+from typing import Dict, List
 
 
 def get_windows_usb_devices(

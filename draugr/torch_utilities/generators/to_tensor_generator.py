@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-from typing import Iterable, Iterator, Tuple, Union, MutableMapping
+from typing import Iterable, Iterator, MutableMapping, Tuple, Union
 
 import numpy
 import torch
-from draugr.torch_utilities.datasets import NonSequentialDataset
-from draugr.torch_utilities.tensors import to_tensor
 from torch.utils.data.dataloader import DataLoader
 
+from draugr.torch_utilities.datasets import NonSequentialDataset
+from draugr.torch_utilities.tensors import to_tensor
 from warg import passes_kws_to
 
 __author__ = "Christian Heider Lindbjerg"

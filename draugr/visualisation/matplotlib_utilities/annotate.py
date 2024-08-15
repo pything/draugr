@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -7,7 +6,7 @@ __doc__ = r"""
            Created on 04-03-2021
            """
 
-from typing import Tuple, MutableMapping, Callable
+from typing import Callable, MutableMapping, Tuple
 
 from draugr.scipy_utilities import mag_decimation_subsample
 

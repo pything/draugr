@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 __author__ = "Christian Heider Lindbjerg"
@@ -14,10 +13,11 @@ __all__ = ["FastFourierTransformSpectrogramPlot"]
 import math
 
 import numpy
-from draugr.drawers.mpl_drawers.mpldrawer import MplDrawer
-from draugr.progress_bars import progress_bar
 from matplotlib import pyplot
 from matplotlib.gridspec import GridSpec
+
+from draugr.drawers.mpl_drawers.mpldrawer import MplDrawer
+from draugr.progress_bars import progress_bar
 
 FLOAT_EPS = numpy.finfo(float).eps
 
@@ -94,7 +94,7 @@ class FastFourierTransformSpectrogramPlot(MplDrawer):
             self.angle_cbar_ax,
             self.spec_ax,
             self.spec_cbar_ax,
-        ) = [pyplot.subplot(gs[i]) for i in range(6)]
+        ) = (pyplot.subplot(gs[i]) for i in range(6))
 
         (self.raw_line2d,) = self.raw_ax.plot(time_s, raw_array)
         self.raw_ax.set_xlim([time_s[0], time_s[-1]])

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -8,7 +7,7 @@ __doc__ = r"""
            """
 
 from functools import reduce
-from typing import Sequence, Optional
+from typing import Optional, Sequence
 
 import numpy
 from matplotlib import pyplot

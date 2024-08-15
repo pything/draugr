@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -9,7 +8,7 @@ __doc__ = r"""
 
 import os
 from pathlib import Path
-from typing import Iterable, Union, Callable
+from typing import Callable, Iterable, Union
 
 __all__ = ["build_flat_dataset"]
 

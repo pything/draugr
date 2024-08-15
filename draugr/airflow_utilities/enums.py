@@ -1,7 +1,12 @@
-# -*- coding: utf-8 -*-
-from enum import Enum
-from sorcery import assigned_names
+#!/usr/bin/env python3
 
+__author__ = "Christian Heider Lindbjerg"
+
+__doc__ = r"""
+"""
+from enum import Enum
+
+from sorcery import assigned_names
 
 __all__ = ["AutoRemoveEnum"]
 

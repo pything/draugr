@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -11,8 +10,8 @@ from collections import OrderedDict
 from itertools import tee
 
 import torch
-from draugr.torch_utilities.optimisation.parameters.freezing import freeze_parameters
 
+from draugr.torch_utilities.optimisation.parameters.freezing import freeze_parameters
 from warg import AlsoDecorator
 
 __all__ = [

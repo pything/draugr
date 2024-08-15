@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -13,10 +12,9 @@ __all__ = ["choose_progress_bar"]
 from itertools import count
 from typing import Iterator
 
-from draugr.python_utilities.platform_context import in_ipynb
-from draugr.progress_bars.eta_bar import ETABar
 from draugr.progress_bars.auto_progress_bar import progress_bar
-
+from draugr.progress_bars.eta_bar import ETABar
+from draugr.python_utilities.platform_context import in_ipynb
 from warg import LambdaContext
 
 

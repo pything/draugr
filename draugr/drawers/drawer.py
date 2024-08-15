@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
@@ -10,12 +9,12 @@ __doc__ = r"""
 __all__ = ["Drawer"]
 
 from abc import abstractmethod
-from typing import Sequence, MutableMapping, Any
+from typing import Any, MutableMapping, Sequence
 
 from warg import drop_unused_kws
 
 
-class Drawer(object):
+class Drawer:
     """
     Abstract class for drawing representations of data
     """

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "heider"
 __doc__ = r"""
@@ -12,7 +11,6 @@ __all__ = ["get_video_sources"]
 
 from pathlib import Path
 from typing import Set
-
 
 from warg import is_windows
 
@@ -28,7 +26,7 @@ def get_video_sources() -> Set[int]:
         from os_utilities.windows_utilities.usb_devices import get_windows_usb_devices
 
         usb_devices = get_windows_usb_devices()
-        return set([i for i, _ in enumerate(usb_devices)])
+        return {i for i, _ in enumerate(usb_devices)}
 
     char_devices = [f for f in Path("/dev").iterdir() if f.is_char_device()]
     return set(

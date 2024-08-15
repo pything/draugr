@@ -1,26 +1,24 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 
 import numpy
 import torch
-
 from torch.nn import (
+    Conv1d,
     Conv2d,
-    Linear,
-    Module,
-    Sigmoid,
-    Tanh,
-    ReLU,
-    LeakyReLU,
-    Softmax,
-    Softplus,
-    SiLU,
+    Conv3d,
     ELU,
     Identity,
-    Conv1d,
-    Conv3d,
+    LeakyReLU,
+    Linear,
+    Module,
+    ReLU,
+    SiLU,
+    Sigmoid,
+    Softmax,
+    Softplus,
+    Tanh,
 )
 from torch.nn.init import calculate_gain, constant_, uniform_, xavier_uniform_
 

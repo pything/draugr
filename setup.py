@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 from typing import TextIO, List, Sequence, Union
 
 
@@ -67,7 +66,7 @@ def read_reqs(file: str, path: Path) -> List[str]:
     return list(req_set)
 
 
-with open(Path(__file__).parent / "draugr" / "__init__.py", "r") as project_init_file:
+with open(Path(__file__).parent / "draugr" / "__init__.py") as project_init_file:
     content = project_init_file.read()  # get strings from module
     version = re.search(r"__version__ = ['\"]([^'\"]*)['\"]", content, re.M).group(1)
     project_name = re.search(r"__project__ = ['\"]([^'\"]*)['\"]", content, re.M).group(

@@ -1,10 +1,14 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+
+__doc__ = r"""
+"""
 import subprocess
 from pathlib import Path
 from typing import Optional
 
-from warg import Number
-from warg import ensure_existence
+from warg import Number, ensure_existence
 
 FORMAT_LIST = [".mp4", ".avi", ".mkv", ".flv", ".mov"]
 AUDIO_FORMAT = ".aac"

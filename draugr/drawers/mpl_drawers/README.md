@@ -1,6 +1,7 @@
 # Matplotlib Drawers
 
-Utilities for drawing real time data stream figures using matplotlib and also some general classification metric plots
+Utilities for drawing real time data stream figures using matplotlib and also some general classification
+metric plots
 
 ## Real time plotting
 

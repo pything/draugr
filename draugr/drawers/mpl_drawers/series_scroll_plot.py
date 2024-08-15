@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 __author__ = "Christian Heider Lindbjerg"
@@ -9,12 +8,13 @@ __doc__ = r"""
 
            """
 
-from typing import Sequence, Union, MutableMapping
+from typing import MutableMapping, Sequence, Union
 
 import numpy
+from matplotlib import pyplot
+
 from draugr.drawers.mpl_drawers.mpldrawer import MplDrawer
 from draugr.numpy_utilities import recursive_flatten_numpy
-from matplotlib import pyplot
 
 __all__ = ["SeriesScrollPlot"]
 

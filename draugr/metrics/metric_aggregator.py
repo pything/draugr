@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import statistics
 from pathlib import Path
 from typing import List
@@ -22,7 +21,7 @@ MEASURES = {*statistics.__all__} - {
 # Check if statistics takes only one arg. TODO: Automatic function def args inspection?
 
 
-class MetricAggregator(object):
+class MetricAggregator:
     """description"""
 
     def __init__(

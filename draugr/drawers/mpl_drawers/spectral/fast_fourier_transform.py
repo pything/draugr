@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 __author__ = "Christian Heider Lindbjerg"
@@ -14,10 +13,11 @@ __all__ = ["FastFourierTransformPlot"]
 import math
 
 import numpy
-from draugr.drawers.mpl_drawers.mpldrawer import MplDrawer
-from draugr.progress_bars import progress_bar
 from matplotlib import pyplot
 from matplotlib.gridspec import GridSpec
+
+from draugr.drawers.mpl_drawers.mpldrawer import MplDrawer
+from draugr.progress_bars import progress_bar
 
 FLOAT_EPS = numpy.finfo(float).eps
 
@@ -66,9 +66,9 @@ class FastFourierTransformPlot(MplDrawer):
         self.zeroes_padding = numpy.zeros((self.abs_n_fft, n_fft))
 
         gs = GridSpec(3, 1)
-        (self.raw_ax, self.angle_ax, self.mag_ax) = [
+        (self.raw_ax, self.angle_ax, self.mag_ax) = (
             pyplot.subplot(gs[i]) for i in range(3)
-        ]
+        )
 
         freqs = numpy.fft.fftfreq(self.n_fft, 1 / sampling_rate)
 

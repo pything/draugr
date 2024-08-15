@@ -1,10 +1,15 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+__author__ = "Christian Heider Lindbjerg"
+__doc__ = r"""
+
+           Created on 14/01/2020
+           """
 import math
 
 import cv2
 import numpy
-from draugr.opencv_utilities import LineTypeEnum
 
+from draugr.opencv_utilities import LineTypeEnum
 
 # ============================================================================
 
@@ -157,7 +162,7 @@ if __name__ == "__main__":
         if save_intermediate:
             show_image(
                 transparency,
-                wait=True
+                wait=True,
                 # save_path = basep/"eligrad-t.png"
             )
 
@@ -168,7 +173,7 @@ if __name__ == "__main__":
         if save_intermediate:
             show_image(
                 intensity,
-                wait=True
+                wait=True,
                 # save_path =  str(basep / "eligrad-i1.png")
             )
 
@@ -193,7 +198,7 @@ if __name__ == "__main__":
 
     show_image(
         draw_image(a, b, theta, inner_scale, True),
-        wait=True
+        wait=True,
         # save_path = str(basep/"eligrad.png")
     )
 

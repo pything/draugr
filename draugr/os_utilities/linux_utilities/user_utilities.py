@@ -1,6 +1,11 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
 __author__ = "Christian Heider Lindbjerg"
-__doc__ = r"""description"""
+__doc__ = r"""
+
+           Created on 19/03/2020
+           """
+
 __all__ = [
     "make_user",
     "remove_user",
@@ -50,11 +55,11 @@ def make_user(
         with ContextWrapper(
             sh.contrib.sudo,
             construction_kwargs=dict(
-                password=getpass.getpass(
-                    prompt=f"[sudo] password for {getpass.getuser()}: "
-                )
-                if get_sudo
-                else None,
+                password=(
+                    getpass.getpass(prompt=f"[sudo] password for {getpass.getuser()}: ")
+                    if get_sudo
+                    else None
+                ),
                 _with=True,
             ),
             enabled=get_sudo,
@@ -86,11 +91,13 @@ def remove_user(
             with ContextWrapper(
                 sh.contrib.sudo,
                 construction_kwargs=dict(
-                    password=getpass.getpass(
-                        prompt=f"[sudo] password for {getpass.getuser()}: "
-                    )
-                    if get_sudo
-                    else None,
+                    password=(
+                        getpass.getpass(
+                            prompt=f"[sudo] password for {getpass.getuser()}: "
+                        )
+                        if get_sudo
+                        else None
+                    ),
                     _with=True,
                 ),
                 enabled=get_sudo,

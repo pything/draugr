@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 __author__ = "Christian Heider Lindbjerg"
 
@@ -22,8 +21,6 @@ from pathlib import Path
 from random import randint
 from time import time
 from typing import Any, Union
-
-import six
 
 from warg import NOD, passes_kws_to
 
@@ -88,7 +85,7 @@ def hyperlink_path(
     return f"\x1b]8;id={link_id};{link}\x1b\\{link}\x1b]8;;\x1b\\"
 
 
-class PrintStyle(object):
+class PrintStyle:
     """description"""
 
     def __init__(self, attributes_joined, end):
@@ -97,7 +94,7 @@ class PrintStyle(object):
 
     def __call__(self, obj, *args, **kwargs) -> str:
         intermediate_repr = f"\x1b[{self._attributes_joined}m{obj}\x1b[{self._end}m"
-        string = six.u(intermediate_repr)
+        string = intermediate_repr
         return string
 
 
@@ -142,20 +139,20 @@ def generate_style(
     if highlight:
         num += 10
 
-    attributes.append(six.u(f"{num}"))
+    attributes.append(f"{num}")
 
     if bold:
-        attributes.append(six.u(f'{DECORATIONS["bold"]}'))
+        attributes.append(f'{DECORATIONS["bold"]}')
 
     if underline:
-        attributes.append(six.u(f'{DECORATIONS["underline"]}'))
+        attributes.append(f'{DECORATIONS["underline"]}')
 
     if italic:
-        attributes.append(six.u(f'{DECORATIONS["italic"]}'))
+        attributes.append(f'{DECORATIONS["italic"]}')
 
     end = DECORATIONS["end"]
 
-    attributes_joined = six.u(";").join(attributes)
+    attributes_joined = ";".join(attributes)
 
     print_style = PrintStyle(attributes_joined, end)
 

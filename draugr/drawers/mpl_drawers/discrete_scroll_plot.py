@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 __author__ = "Christian Heider Lindbjerg"
@@ -11,14 +10,13 @@ Created on 27/04/2019
 
 __all__ = ["DiscreteScrollPlot", "discrete_scroll_plot"]
 
-from typing import Iterator, Sequence, Tuple, MutableMapping, Any
+from typing import Any, Iterator, MutableMapping, Sequence, Tuple
 
 import numpy
+from matplotlib import animation, pyplot
+
 from draugr.drawers.mpl_drawers.mpldrawer import MplDrawer
 from draugr.numpy_utilities import recursive_flatten_numpy
-from matplotlib import animation
-from matplotlib import pyplot
-
 from warg import passes_kws_to
 
 

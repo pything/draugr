@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-import logging
+
 import os
 
 __author__ = "Christian Heider Lindbjerg"
@@ -11,6 +10,10 @@ from draugr.numpy_utilities.datasets.splitting import train_valid_test_split
 from draugr.numpy_utilities.datasets.defaults import DEFAULT_ACCEPTED_FILE_FORMATS
 from typing import Iterable, Union, Callable
 from warg import drop_unused_kws
+
+import logging
+
+logger = logging.getLogger(__name__)
 
 __all__ = ["build_deep_categorical_dataset"]
 
@@ -51,7 +54,7 @@ def build_deep_categorical_dataset(
         directory = Path(directory)
 
     if not directory.exists():
-        logging.error(f"Image directory {directory} not found.")
+        logger.error(f"Image directory {directory} not found.")
         raise FileNotFoundError(f"Image directory {directory} not found.")
 
     b = [path for path, sub_dirs, files in os.walk(str(directory)) if len(files) > 0]
@@ -60,8 +63,8 @@ def build_deep_categorical_dataset(
 
     for label, path in {label.split("/")[-1]: label for label in b}.items():
         for sub_directory in sorted([Path(x[0]) for x in os.walk(str(path))]):
-            logging.info(f"Looking for images in {sub_directory}")
-            for extension in sorted(set(os.path.normcase(ext) for ext in extensions)):
+            logger.info(f"Looking for images in {sub_directory}")
+            for extension in sorted({os.path.normcase(ext) for ext in extensions}):
                 extension = extension.lstrip(".")
                 categories_dict[label].extend(sub_directory / f"*.{extension}")
 

@@ -1,12 +1,17 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
+__author__ = "Christian Heider Lindbjerg"
+
+__doc__ = r"""
+"""
 import cv2
 import numpy
+
 from draugr.dlib_utilities.dlib_utilities import (
     Dlib5faciallandmarksindices,
     Dlib68faciallandmarksindices,
     shape_to_ndarray,
 )
-
 from warg import Number
 
 __all__ = ["align_face"]
