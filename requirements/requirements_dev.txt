@@ -36,7 +36,7 @@ pytest>=7.1.2
 pytest-cov>=3.0.0
 
 # full install
-setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
 tox>=3.25.0
 twine>=4.0.1
 types-six>=1.1.1
