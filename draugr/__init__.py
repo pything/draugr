@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 __project__ = "Draugr"
 __author__ = "Christian Heider Lindbjerg"

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import statistics
 from pathlib import Path
 from typing import List

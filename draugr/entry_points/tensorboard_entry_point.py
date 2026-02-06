@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from shutil import rmtree
 
 __author__ = "Christian Heider Lindbjerg"

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from typing import TextIO, List, Sequence, Union
 
 

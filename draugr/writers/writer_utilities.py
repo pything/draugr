@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from typing import Dict
 
 import numpy
@@ -20,9 +19,7 @@ def metrics(array: numpy.ndarray) -> Dict:
     :type array:
     :return:
     :rtype:"""
-    d = {}
-    d["mean"] = numpy.mean(array)
-    d["std"] = numpy.std(array)
-    d["min"] = numpy.amin(array)
-    d["max"] = numpy.amax(array)
+    d = {
+        "mean": numpy.mean(array), "std": numpy.std(array), "min": numpy.amin(array), "max": numpy.amax(array)
+        }
     return d

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import functools
 from typing import Any, Callable
 

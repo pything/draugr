@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from typing import Iterable, Iterator, MutableMapping, Tuple, Union
 
 import numpy

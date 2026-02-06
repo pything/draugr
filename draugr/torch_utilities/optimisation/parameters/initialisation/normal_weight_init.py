@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from torch import nn
 
 __author__ = "Christian Heider Lindbjerg"

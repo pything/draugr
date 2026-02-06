@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import math
 from typing import Any, Iterable, Iterator, Sequence, Tuple
 

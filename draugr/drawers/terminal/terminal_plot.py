@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from draugr.drawers.terminal.terminal_utilities import scale
 
 from draugr.python_utilities.styling import (

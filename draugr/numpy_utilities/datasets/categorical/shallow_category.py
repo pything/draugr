@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import os
 
 __author__ = "Christian Heider Lindbjerg"
