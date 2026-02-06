@@ -1,4 +1,3 @@
-
 __author__ = "Christian Heider Lindbjerg"
 
 import numpy

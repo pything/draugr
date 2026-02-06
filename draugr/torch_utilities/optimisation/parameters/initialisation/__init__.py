@@ -1,4 +1,3 @@
-
 __author__ = "Christian Heider Lindbjerg"
 
 from .atari_weight_init import *

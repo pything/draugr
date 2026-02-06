@@ -1,4 +1,3 @@
-
 from typing import Any, Iterable, Sequence
 
 __author__ = "Christian Heider Lindbjerg"

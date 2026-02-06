@@ -1,4 +1,3 @@
-
 __project__ = "Draugr"
 __author__ = "Christian Heider Lindbjerg"
 __version__ = "1.2.1"

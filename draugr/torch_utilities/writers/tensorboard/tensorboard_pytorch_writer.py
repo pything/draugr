@@ -1,4 +1,3 @@
-
 from contextlib import suppress
 from typing import Any, Iterable, MutableMapping, Sequence, Union
 

@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 from gi.repository import Gtk, Gdk
 
 

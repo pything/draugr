@@ -1,4 +1,3 @@
-
 __author__ = "Christian Heider Lindbjerg"
 __doc__ = r"""
                Image stream plot using matplotlib

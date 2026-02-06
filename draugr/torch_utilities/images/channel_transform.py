@@ -1,4 +1,3 @@
-
 import torch
 
 __author__ = "Christian Heider Lindbjerg"

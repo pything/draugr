@@ -1,9 +1,11 @@
-
 __author__ = "Christian Heider Lindbjerg"
 
 from typing import Any, MutableMapping, Sequence
 
-from draugr.metrics.metric_aggregator import MEASURES, MetricAggregator
+from draugr.metrics.metric_aggregator import (
+    MetricAggregator,
+    get_single_arg_stats_functions,
+)
 
 __all__ = ["MetricCollection"]
 
@@ -14,7 +16,7 @@ class MetricCollection(dict):
     def __init__(
         self,
         metrics=("signal", "length"),
-        measures=MEASURES,
+        measures=get_single_arg_stats_functions(),
         keep_measure_history=True,
         use_disk_cache=True,
     ):

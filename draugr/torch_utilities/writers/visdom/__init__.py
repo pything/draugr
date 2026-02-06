@@ -1,4 +1,3 @@
-
 __author__ = "Christian Heider Lindbjerg"
 
 from .episode_visual import *

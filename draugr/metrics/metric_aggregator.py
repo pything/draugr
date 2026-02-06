@@ -1,3 +1,5 @@
+import inspect
+import logging
 import statistics
 from pathlib import Path
 from typing import List
@@ -5,7 +7,7 @@ from warnings import warn
 
 __author__ = "Christian Heider Lindbjerg"
 
-__all__ = ["MetricAggregator", "save_metric"]
+__all__ = ["MetricAggregator", "save_metric", "get_single_arg_stats_functions"]
 
 MEASURES = {*statistics.__all__} - {
     "correlation",  # x,y args
@@ -17,7 +19,47 @@ MEASURES = {*statistics.__all__} - {
 }
 
 
-# Check if statistics takes only one arg. TODO: Automatic function def args inspection?
+def get_single_arg_stats_functions():
+    """Automatically filter statistics functions that take exactly one argument."""
+    single_arg_funcs = set()
+
+    for name in statistics.__all__:
+        obj = getattr(statistics, name)
+
+        # Skip non-callable objects (like exceptions)
+        if not callable(obj):
+            continue
+
+        try:
+            sig = inspect.signature(obj)
+            # Count parameters excluding *args, **kwargs, and those with defaults
+            params = [
+                p
+                for p in sig.parameters.values()
+                if p.kind
+                in (
+                    inspect.Parameter.POSITIONAL_ONLY,
+                    inspect.Parameter.POSITIONAL_OR_KEYWORD,
+                )
+                and p.default == inspect.Parameter.empty
+            ]
+
+            if len(params) == 1:
+                single_arg_funcs.add(name)
+            elif len(params) > 1:
+                _logger.warning(
+                    f'Skipping "{name}" as it takes more than one required argument.'
+                )
+            else:
+                _logger.warning(f'Skipping "{name}" as it takes no required arguments.')
+        except (ValueError, TypeError):
+            # Skip if signature inspection fails
+            continue
+
+    return single_arg_funcs
+
+
+_logger = logging.getLogger(__name__)
 
 
 class MetricAggregator:
@@ -30,7 +72,7 @@ class MetricAggregator:
         use_disk_cache=True,
     ):
         if measures is None:
-            measures = MEASURES
+            measures = get_single_arg_stats_functions()
 
         self._values = []
         self._length = 0
@@ -87,7 +129,7 @@ class MetricAggregator:
                 try:
                     val = getattr(statistics, key)(self._values)
                 except statistics.StatisticsError as e:
-                    # TODO: warn(f'{e}')
+                    _logger.warning(f"{e}")
                     val = None
                 out[key] = val
             return out
@@ -125,7 +167,7 @@ class MetricAggregator:
                     try:
                         val = getattr(statistics, key)(self._values)
                     except statistics.StatisticsError as e:
-                        # TODO: warn(f'{e}')
+                        _logger.warning(f"{e}")
                         val = None
                     self._measures[key].append(val)
 

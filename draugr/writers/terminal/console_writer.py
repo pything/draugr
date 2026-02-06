@@ -1,4 +1,3 @@
-
 from draugr.writers.writer import Writer
 
 __author__ = "Christian Heider Lindbjerg"

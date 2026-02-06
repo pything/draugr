@@ -20,6 +20,9 @@ def metrics(array: numpy.ndarray) -> Dict:
     :return:
     :rtype:"""
     d = {
-        "mean": numpy.mean(array), "std": numpy.std(array), "min": numpy.amin(array), "max": numpy.amax(array)
-        }
+        "mean": numpy.mean(array),
+        "std": numpy.std(array),
+        "min": numpy.amin(array),
+        "max": numpy.amax(array),
+    }
     return d

@@ -1,4 +1,3 @@
-
 import torch
 
 from draugr.torch_utilities.tensors import to_tensor

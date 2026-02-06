@@ -1,4 +1,3 @@
-
 __author__ = "heider"
 __doc__ = r"""
            Render images on the command line
