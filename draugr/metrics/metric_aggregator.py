@@ -9,15 +9,6 @@ __author__ = "Christian Heider Lindbjerg"
 
 __all__ = ["MetricAggregator", "save_metric", "get_single_arg_stats_functions"]
 
-MEASURES = {*statistics.__all__} - {
-    "correlation",  # x,y args
-    "StatisticsError",  # is an exception
-    "covariance",  # x,y args
-    "linear_regression",  # x,y args
-    "NormalDist",  # returns list, not number
-    # 'geometric_mean' # always None?
-}
-
 
 def get_single_arg_stats_functions():
     """Automatically filter statistics functions that take exactly one argument."""
